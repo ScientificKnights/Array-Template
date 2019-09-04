@@ -47,3 +47,5 @@ catch (int err){
 ## 5. Exception Objects
 abstract Class ArrayException and derived class OutofBoundsException.  
 catch ArrayException in main and print error with derived class funciton.  
+## 6. Templated Array Class
+In test we can either include the source file or include the h file by including source in the end of h file.
