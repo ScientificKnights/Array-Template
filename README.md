@@ -26,8 +26,8 @@ Thus creating an array of pointers is a two step process:
 ```delete [] ps;```  
 ## Array Class for Point Class
 • Add a default constructor that allocates for example 10 elements.  
-• Add a constructor with a size argument.
-• Add a copy constructor. Keep in mind that just copying the C array pointer will create an Array object that shares the data with the original Array object. Thus you need to allocate a new C array with the same size and copy each element separately.
-• Add a destructor. It should delete the internal C array. Don’t forget the square brackets.
-• Add an assignment operator. Keep in mind you can’t copy only the C array pointers just as in the case of the copy constructor.
-• Also don’t forget to delete the old C array and allocate new memory before copying the elements. This is because C arrays can’t grow.
+• Add a constructor with a size argument.  
+• Add a copy constructor. Keep in mind that just copying the C array pointer will create an Array object that shares the data with the original Array object. Thus you need to allocate a new C array with the same size and copy each element separately.  
+• Add a destructor. It should delete the internal C array. Don’t forget the square brackets.  
+• Add an assignment operator. Keep in mind you can’t copy only the C array pointers just as in the case of the copy constructor. Also don’t forget to delete the old C array and allocate new memory before copying the elements. This is because C arrays can’t grow.  
+• Add the following const version of the square bracket operator. For const Array, if Array[index] return Point &, it means Array can be changed. We need return type const Point & and also function as const since we don't want to change const Array object.  
