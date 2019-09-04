@@ -24,3 +24,4 @@ Thus creating an array of pointers is a two step process:
   
 • Delete the array itself.  
 ```delete [] ps;```  
+## Array Class for Point Class
