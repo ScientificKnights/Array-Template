@@ -53,3 +53,5 @@ In test we can either include the source file or include the h file by including
 static variables are shared between all instances of class. if change static variable in one Array<int>, all Array<int> will change, but Array<double> is not changed.
 ## Advanced 2. Numeric Array (generic inheritance)
 Put extra functions in derived class.  
+## Advanced 3. Point Array (concrete inheritance)
+Create a derived class of which the template argument is fixed to a specific type(Point).
