@@ -44,3 +44,6 @@ catch (int err){
   if (err==-1){}
 }
 ```  
+## 5. Exception Objects
+abstract Class ArrayException and derived class OutofBoundsException.  
+catch ArrayException in main and print error with derived class funciton.  
