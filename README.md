@@ -1,4 +1,4 @@
-# Build Array step by step
+# Build templated Array step by step
 ## 1. Dynamically creating objects
 The stack is limited in size thus when creating many objects, the stack will overflow. Also arrays created on the stack can only have a fixed size determined at compile time. To overcome these problems we have to create objects on the heap using new.  
 ```
@@ -48,6 +48,8 @@ catch (int err){
 abstract Class ArrayException and derived class OutofBoundsException.  
 catch ArrayException in main and print error with derived class funciton.  
 ## 6. Templated Array Class
-In test we can either include the source file or include the h file by including source in the end of h file.
+In test we can either include the source file or include the h file by including source in the end of h file.  
 ## Advanced 1. Static variable
-static variables are shared between all instances of class. if change static variable in one Array<int>, all Array<int> will change, but Array<double> is not changed.
+static variables are shared between all instances of class. if change static variable in one Array<int>, all Array<int> will change, but Array<double> is not changed.  
+  ## Advanced 2. Numeric Array (generic inheritance)
+  
