@@ -59,3 +59,9 @@ Create a derived class of which the template argument is fixed to a specific typ
 Using another class as data member is called composition. In this case the Stack class uses internally an Array class. Forwarding functionality to another class is called delegation. Here the Stack class delegates the storage of elements to the Array class.  
 ## Advanced 5. Value Template Arguments
 Use int value as template variable. Note that now only stacks with the same size template argument can be copied/assigned.  
+```
+template<typename T,int size>
+stack<T,size> :: Stack()
+  :m_array(Array<T>(size),m_current(0){
+}
+```  
