@@ -65,3 +65,6 @@ stack<T,size> :: Stack()
   :m_array(Array<T>(size),m_current(0){
 }
 ```  
+## Advanced 6. Smart Pointers
+When store shape* in the array, need to delete all shapes in array explicityly.
+If we store shared_ptr<Shape> in Array and the deletion of shapes will be done automatically.
