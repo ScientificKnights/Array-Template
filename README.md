@@ -54,4 +54,8 @@ static variables are shared between all instances of class. if change static var
 ## Advanced 2. Numeric Array (generic inheritance)
 Put extra functions in derived class.  
 ## Advanced 3. Point Array (concrete inheritance)
-Create a derived class of which the template argument is fixed to a specific type(Point).
+Create a derived class of which the template argument is fixed to a specific type(Point).  
+## Advanced 4. Stack Class (composition)
+Using another class as data member is called composition. In this case the Stack class uses internally an Array class. Forwarding functionality to another class is called delegation. Here the Stack class delegates the storage of elements to the Array class.  
+## Advanced 5. Value Template Arguments
+Use int value as template variable. Note that now only stacks with the same size template argument can be copied/assigned.  
