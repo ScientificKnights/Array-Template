@@ -1,0 +1,40 @@
+#ifndef POINT_H
+#define POINT_H
+#include <string>
+#include "Shape.h"
+
+//Point class
+//contains x and y coordinates and function to set and show x and y 
+//and describe the point by with string.
+//and calculate distance between origin and other point
+//derived class from Shape
+
+class Point :public Shape
+{
+private:
+	double m_x; //x coordinate
+	double m_y;//y coordinate
+public:
+	Point();												//default constructor
+	Point(const Point &pt);							//copy constructor
+	Point(double new_x, double new_y);		//constructor accepts x and y
+	Point(int id, double new_x, double new_y);	//constructors accepts id, x and y
+	virtual ~Point();											//destructor
+	double X() const;								//get x and y coordinates
+	double Y() const;
+	void X(double new_x);						//set x and y coordinates
+	void Y(double new_y);
+	virtual std::string ToString() const;				//describe point
+	double Distance() const;					// Calculate the distance to the origin (0, 0).
+	double Distance(const Point & p) const;		// Calculate the distance between two points.
+	virtual void Draw() const;							//Draw function
+	Point operator - () const;					// Negate the coordinates.
+	Point operator * (double factor) const;			// Scale the coordinates.
+	Point operator + (const Point& p) const;		// Add coordinates.
+	bool operator == (const Point& p) const;		// Equally compare operator.
+	Point& operator = (const Point& source);		// Assignment operator.
+	Point& operator *= (double factor);				// Scale the coordinates & assign.
+	friend std::ostream& operator << (std::ostream& os, const Point& p); // Send to ostream.
+};
+
+#endif
